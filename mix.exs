@@ -51,15 +51,14 @@ defmodule NervesSystemKd240.MixProject do
       # The :env key is an optional experimental feature for adding environment
       # variables to the crosscompile environment. These are intended for
       # llvm-based tooling that may need more precise processor information.
-      # FIXME
-      # env: [
-      #   {"TARGET_ARCH", "aarch64"},
-      #   {"TARGET_CPU", "cortex_a53"},
-      #   {"TARGET_OS", "linux"},
-      #   {"TARGET_ABI", "gnu"},
-      #   {"TARGET_GCC_FLAGS",
-      #    "-mabi=lp64 -fstack-protector-strong -mcpu=cortex-a53 -fPIE -pie -Wl,-z,now -Wl,-z,relro"}
-      # ],
+      env: [
+        {"TARGET_ARCH", "aarch64"},
+        {"TARGET_CPU", "cortex_a53"},
+        {"TARGET_OS", "linux"},
+        {"TARGET_ABI", "gnu"},
+        {"TARGET_GCC_FLAGS",
+         "-mabi=lp64 -Wl,-z,max-page-size=4096 -Wl,-z,common-page-size=4096 -fstack-protector-strong -mcpu=cortex-a53 -fPIE -pie -Wl,-z,now -Wl,-z,relro"}
+      ],
       checksum: package_files()
     ]
   end
