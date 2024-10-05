@@ -13,6 +13,9 @@ DFX_MGR_SITE = $(call github,Xilinx,dfx-mgr,$(DFX_MGR_VERSION))
 DFX_MGR_LICENSE = MIT
 DFX_MGR_LICENSE_FILES = LICENSE
 DFX_MGR_DEPENDENCIES = libdfx libwebsockets libdrm
-DFX_MGR_CONF_OPTS = -DWITH_STATIC_LIB=OFF -DWITH_SHARED_LIB=ON
+DFX_MGR_CONF_OPTS = -DWITH_STATIC_LIB=OFF \
+                    -DWITH_SHARED_LIB=ON \
+                    -DCMAKE_C_FLAGS="-Wno-error=address" \
+                    -DCMAKE_CXX_FLAGS="-Wno-error=address"
 
 $(eval $(cmake-package))
