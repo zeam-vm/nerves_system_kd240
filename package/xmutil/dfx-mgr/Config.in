@@ -13,7 +13,6 @@ config BR2_PACKAGE_DFX_MGR
 config BR2_PACKAGE_DFX_MGR_USE_XMUTIL_TAG
 	bool "use xmutil default tag"
 	default y
-	depends on BR2_PACKAGE_XMUTIL
 	depends on BR2_PACKAGE_DFX_MGR
 
 config BR2_PACKAGE_DFX_MGR_TAG

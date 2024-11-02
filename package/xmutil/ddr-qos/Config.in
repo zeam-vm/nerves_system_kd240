@@ -10,7 +10,6 @@ config BR2_PACKAGE_DDR_QOS
 config BR2_PACKAGE_DDR_QOS_USE_XMUTIL_TAG
 	bool "use xmutil default tag"
 	default y
-	depends on BR2_PACKAGE_XMUTIL
 	depends on BR2_PACKAGE_DDR_QOS
 
 config BR2_PACKAGE_DDR_QOS_TAG
