@@ -15,8 +15,8 @@ DFX_MGR_LICENSE_FILES = LICENSE
 DFX_MGR_DEPENDENCIES = libdfx libwebsockets libdrm
 DFX_MGR_CONF_OPTS = -DWITH_STATIC_LIB=OFF \
                     -DWITH_SHARED_LIB=ON \
-                    -DCMAKE_C_FLAGS="-Wno-error=address -Wno-error=unused-parameter" \
-                    -DCMAKE_CXX_FLAGS="-Wno-error=address -Wno-error=unused-parameter"
+                    -DCMAKE_C_FLAGS="-Wno-error=address -Wno-error=unused-parameter -Wno-error=calloc-transposed-args" \
+                    -DCMAKE_CXX_FLAGS="-Wno-error=address -Wno-error=unused-parameter -Wno-error=calloc-transposed-args"
 
 # Comment out two lines which needs systemd header
 # Nerves doesn't include systemd header, so this line causes building error
