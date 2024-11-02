@@ -19,8 +19,8 @@ define XLNX_PLATFORMSTATS_BUILD_CMDS
 endef
 
 define XLNX_PLATFORMSTATS_INSTALL_TARGET_CMDS
-	cp -a $(@D)/src/libplatformstats.so* $(TARGET_DIR)/usr/lib
-	$(INSTALL) -D -m 0755 $(@D)/app/platformstats $(TARGET_DIR)/usr/bin
+	cp -a $(@D)/src/libxlnx_platformstats.so* $(TARGET_DIR)/usr/lib
+	$(INSTALL) -D -m 0755 $(@D)/app/xlnx_platformstats $(TARGET_DIR)/usr/bin
 endef
 
 $(eval $(generic-package))

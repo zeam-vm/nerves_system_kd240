@@ -9,7 +9,7 @@ config BR2_PACKAGE_XMUTIL
 config BR2_PACKAGE_XMUTIL_DEFAULT_TAG
 	string "xmutil default git tag"
 	depends on BR2_PACKAGE_XMUTIL
-	default "xilinx_v2022.1_update2"
+	default "xilinx_v2024.1"
 	help
 	  Specify tools default tag name.
 
