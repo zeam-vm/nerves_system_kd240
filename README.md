@@ -10,22 +10,22 @@ under the [Media Library Terms and Conditions](https://www.amd.com/en/corporate/
 | Feature        | Description                                                                  |
 | -------------- | ---------------------------------------------------------------------------- |
 | CPU            | 1.333 GHz quad-core Cortex-A53                                               |
-| Memory         | 4 GB DDR4                                                                    |
-| Storage        | MicroSD, 512 Mb QSPI, 16 GB eMMC, 64 Kb EEPROM                               |
+| Memory         | 2 GB DDR4                                                                    |
+| Storage        | MicroSD, 512 Mb QSPI                                                         |
 | Linux kernel   | [linux-xlnx](https://github.com/Xilinx/linux-xlnx)                           |
-| IEx terminal   | HDMI and USB keyboard (can be changed to UART)                               |
-| GPIO, I2C, SPI | Raspberry Pi HAT I/F - [Elixir Circuits](https://github.com/elixir-circuits) |
+| IEx terminal   | UART (micro USB)                                                             |
+| I2C            | [Elixir Circuits](https://github.com/elixir-circuits)                        |
 | ADC            | No                                                                           |
 | PWM            | No                                                                           |
-| UART           | 1 available - `ttyPS1`                                                       |
-| Display        | Display Port 1.2a                                                            |
+| RS485          | 1 available - `ttyPS0`                                                       |
+| Display        | No                                                                           |
 | Camera         | No                                                                           |
-| Ethernet       | 2 avaiable PS ethernet and 2 PL                                              |
+| Ethernet       | 1 avaiable PS ethernet and 2 PL                                              |
 | WiFi           | No                                                                           |
 | Bluetooth      | No                                                                           |
 | Audio          | No                                                                           |
-| Pmod           | 4 available - 12-pin, Untested                                               |
-| USB            | 4 available                                                                  |
+| Pmod           | 1 available - 12-pin, Untested                                               |
+| USB            | 2 available                                                                  |
 
 ## Using
 
@@ -141,7 +141,7 @@ The default firmware can be specified by `rootfs_overlay/etc/dfx-mgrd/default_fi
 
 User can change it by your Nerves project's `rootfs_overlay/etc/dfx-mgrd/default_firmware`.
 
-Would like to know more details? Let's read https://github.com/Xilinx/dfx-mgr/tree/xilinx_v2022.1_update2#daemonconf.
+Would like to know more details? Let's read https://github.com/Xilinx/dfx-mgr/tree/xilinx_v2024.1#daemonconf.
 
 **NOTE:This system specified `k24-starter-kits` for default, but doesn't include the firmware.**
 
