@@ -12,6 +12,15 @@ follows:
    releases, and Linux kernel updates. They're also made to fix bugs and add
    features to the build infrastructure.
 
+## v0.1.0
+
+This is the first public release.
+
+* Fixes
+  * When `Nerves.Runtime.revert/0` was executed with a USB storage device inserted,
+    usb0 was assigned to the USB storage, causing the revert to fail.
+    This issue has been fixed.
+
 ## v0.0.2
 
 This is a major Buildroot and toolchain update.
