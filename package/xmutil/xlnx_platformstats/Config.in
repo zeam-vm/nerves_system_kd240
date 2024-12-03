@@ -1,7 +1,7 @@
 config BR2_PACKAGE_XLNX_PLATFORMSTATS
 	bool "xlnx_platformstats"
 	depends on BR2_PACKAGE_XMUTIL
-  select BR2_PACKAGE_FREEIPMI
+  depends on BR2_PACKAGE_FREEIPMI
 	help
 	  A library that provides APIs to print different platform statistics.
 
